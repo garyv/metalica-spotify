@@ -1,12 +1,12 @@
 // fonts
-window.onerror = function() {
-  return true;
-}
-setTimeout( function(){
-  try {
-    Cufon.replace('h3');
-  } catch (err) {};
-}, 10);
+//window.onerror = function() {
+//  return true;
+//}
+//setTimeout( function(){
+//  try {
+//    Cufon.replace('h3');
+//  } catch (err) {};
+//}, 10);
 
 // slider
 $( function(){
@@ -16,4 +16,10 @@ $( function(){
     maxSlides: 4,
     slideMargin: 10
   });
+
+  // font
+  try {
+    Cufon.replace('h3');
+  } catch (err) {};
+
 });

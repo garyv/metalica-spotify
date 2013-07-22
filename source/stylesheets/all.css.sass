@@ -237,6 +237,18 @@ small
   color: $red
   margin-top: 48px
 
+  
+  h5, h6, div
+    position: relative
+
+  .black-box
+    background-color: rgba(0,0,0, .5)
+    position: absolute
+    top: 10px
+    bottom: 10px
+    left: 0
+    right: 0
+
   h5, h6
     color: #a3a4a3
     font-size: 24px
@@ -267,8 +279,6 @@ small
   .portrait-james
     @extend .portrait-james:hover
 
-  .row
-    background-color: rgba(0,0,0, .35)
   .row:hover
     .portrait-lars
       @extend .portrait-lars:hover
@@ -325,13 +335,13 @@ small
     @extend .common-previous
     height: common-sprite-height(previous)
     width: common-sprite-width(previous)
-    margin-left: -93px
+    margin-left: -43px
 
   a.bx-next
     @extend .common-next
     height: common-sprite-height(next)
     width: common-sprite-width(next)
-    right: -82px
+    right: -33px
 
 .review
   margin-top: 72px
@@ -347,5 +357,8 @@ small
     font-size: 28px
   p
     font-size: 15px
+
+#albums
+  margin-top: -8px
 
 //@import 'scroll'

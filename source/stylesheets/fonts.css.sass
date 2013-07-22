@@ -1,0 +1,10 @@
+@mixin embed_font($name, $path)
+  @font-face
+    font-family: '#{$name}'
+    src: url('#{$path}.eot')
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}##{$name}') format('svg')
+    font-weight: normal
+    font-style: normal
+
++embed-font('Arial Narrow Bold', 'http://jo.www.bucket.s3.amazonaws.com/metallica/fonts/arial_narrow_bold-webfont')
+

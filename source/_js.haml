@@ -1,0 +1,16 @@
+-#%a.debug{ href: '#firebug', onclick: 'firebug(); return false', style: 'color:#000' } debug
+-#:javascript
+  function firebug(){
+    var s = document.createElement( 'script' );
+    s.src = 'https://getfirebug.com/firebug-lite-beta.js#startOpened';
+    document.head.appendChild(s);
+  }
+
+/[if lt IE 8]
+  %script(src="http://ie6-upgrade-message.googlecode.com/svn/trunk/IE6UpgradeMessage.js")
+  %script
+    IE6UpgradeMessage.text = "We notice you are still using an old version of Internet Explorer. Click here to upgrade.";
+    IE6UpgradeMessage.url = "http://windows.microsoft.com/en-US/internet-explorer/downloads/ie";
+
+%script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+%script(src='javascripts/all.js?v=1')

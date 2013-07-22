@@ -1,0 +1,116 @@
+
+.header.center
+  %h1.hide-text Metalica - Through the Never
+  %h2.hide-text iMax 3D 9/27/13
+  %h3.hide-text Theatres Everywhere 10/4/13
+
+.page
+  .row.page-spacing
+    .common-tagline
+      %h4.hide-text
+        Get tix for Metallica's 3D movie Through The Never and
+        stream their entire catalog only on Spotify
+
+    %h3 WATCH THE TRAILER
+
+  .row
+    .half-wide.left
+      .video
+        %iframe(src="http://player.vimeo.com/video/70571404?&title=0&byline=0&portrait=0&color=480100" width="441" height="248" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen)
+      .page-spacing
+        %h3 BUY TICKETS NOW
+        %h4.common-dates.hide-text
+          iMax 3D 9/27/13 | Theatres Everywhere 10/4/13
+
+        .tickets
+          .common-divider-alt
+
+          %iframe(src="http://spotify.throughthenevermovie.com" width="400" height="250" frameborder="0" scrolling="no")
+
+    .half-wide.right
+
+      .playlists
+
+        %h3 PLAYLISTS
+
+        .row
+          .fourth-wide.left
+            .common-frame
+              .portrait-james
+          .half-wide.left.top-spacing
+            %h5 James Hetfield
+            .common-divider
+            %h6 Vocals, Guitar
+          .fourth-wide.right.top-spacing
+            %a.common-listen(href='spotify:user:metallicaofficial:playlist:0QnnoJ5gQjdM6i6xVPUCCr') Listen
+        .row
+          .fourth-wide.left
+            .frame
+              .portrait-lars
+          .half-wide.left.top-spacing
+            %h5 Lars Ulrich
+            .common-divider
+            %h6 Drums
+          .fourth-wide.right.top-spacing
+            .heading Coming Soon
+            -#8/27
+        .row
+          .fourth-wide.left
+            .frame
+              .portrait-kirk
+          .half-wide.left.top-spacing
+            %h5 Kirk Hammett
+            .common-divider
+            %h6 Guitar, Background vocals
+          .fourth-wide.right.top-spacing
+            .heading Coming Soon
+            -#8/30
+        .row
+          .fourth-wide.left
+            .frame
+              .portrait-robert
+          .half-wide.left.top-spacing
+            %h5 Robert Trujillo
+            .common-divider
+            %h6 Bass, Background Vocals
+          .fourth-wide.right.top-spacing
+            .heading Coming Soon
+            -#9/7
+
+  .page-spacing
+    %h3#albums ALBUMS
+
+.albums.center
+  .slider
+    -(1..14).each do |i|
+      .common-slide
+        = partial 'album', locals: { i: i }
+
+.page
+
+
+  .row.review
+    .half-wide.left
+      .common-frame-alt
+        %img(src='images/review/master.jpg' alt='')
+    .half-wide.right.side-spacing.scroll-box
+      %h5.red Master of Puppets
+
+      %p
+        By Tim Holmes, Rolling Stone
+        %br/
+        June 5, 1986
+
+      %p Metallica has taken the raw material of heavy metal and refined all the shit — the swaggering cock-rock braggadocio and the medieval dungeons and dragons imagery — right out of it. Instead of the usual star-struttin' ejaculatory gestures and hokey showbiz razzmatazz, the members of Metallica pour out pure apocalyptic dread. Their version of heavy metal is the sound of global paranoia. Not for them is the tra-la-la music of escapism; they never promote the notion that rock itself is some sort of method for salvation or transcendence. Rather, their fiery chomp-chomp-chomp provides the aural analogue to the terrors their lyrics define.
+
+
+      %p Metallica holds true to the metal dictum that nothing succeeds like excess, and as if to prove it, the eight songs on <i>Master of Puppets</i> clock in at just under an hour. Plainly, this band — bassist Cliff Burton, drummer Lars Ulrich, guitarist Kirk Hammett and singer and rhythm guitarist James Hetfield — has a lot to say. The title tune extrapolates from the basic metal metaphor of drug abuse as enslavement ("Needlework the way, never you betray/Life of death becoming clearer/Pain monopoly, ritual misery/Chop your breakfast on a mirror") to suggest that we are all being jerked around by the hand of God. Then on "Leper Messiah," they damn the flimsy ruses of false prophets. Rather than simply write them off as transparent hucksters, however, Metallica sees the Leper Messiahs as a direct link to the anti-Christ promoted by that sinister power compound, "Damage, Inc." Metallica shines a cold light on the forces that be, the inescapable evil that turns young men into "Disposable Heroes." The only safe haven is in "Welcome Home (Sanitarium)," which simply states that for those who have seen the world too clearly, there is always an escape available — into delirium.
+
+
+      %p Produced by the band with Flemming Rasmussen, <i>Master of Puppets</i> is the real thing. Metallica has the chops, and yes, subtlety to create a new metal. If they ever award a titanium album, it should go to <i>Master of Puppets</i>.
+
+      %p
+        <a href="http://www.rollingstone.com/music/albumreviews/master-of-puppets-19860605#ixzz2ZQQPwvQJ">http://www.rollingstone.com/</a>
+
+
+

@@ -1,0 +1,30 @@
+<!doctype html>
+<html class='no-js'>
+%head
+  %title
+    = current_page.data.title || "Metallica"
+
+  %meta{ charset: "utf-8" }
+  %meta{ name: 'viewport', content: 'width=900' }
+  %script document.documentElement.className=''
+
+  -#= stylesheet_link_tag "normalize", "all"
+  %link(href="stylesheets/all.css?#{Time.now.to_i}" media="screen" rel="stylesheet")
+
+  -# = javascript_include_tag  "all"
+  -# %script(src="javascripts/all.js")
+
+  :javascript
+    var _gaq = [['_setAccount', "UA-36857180-1" ], ['_trackPageview']];
+    (function(g,a,q) {
+      var ga = document.createElement(g), s = document.getElementsByTagName(g)[0];
+      ga.src = a+q; s.parentNode.insertBefore(ga, s);
+    })('script',location.protocol=='https:'?'//ssl':'//www',".google-analytics.com/ga.js");
+
+%body{:class => page_classes}
+  = yield
+
+  = partial :js
+
+</html>
+

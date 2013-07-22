@@ -1,0 +1,6 @@
+- album = data.albums.send("a#{i}")
+%a{ href: album.link }
+  %span.cover{ class: "album#{i}" }
+  %span.play
+  %span= album.name
+  %span= album.year

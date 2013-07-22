@@ -1,0 +1,342 @@
+@import 'compass'
+
+
+$common-sprite-dimensions: true
+@import "common/*.png"
+@include all-common-sprites
+
+@import "albums/*.png"
+@include all-albums-sprites
+
+$portrait-sprite-dimensions: true
+@import "portrait/*.png"
+@include all-portrait-sprites
+
+@import 'normalize'
+@import 'grid'
+@import 'fonts'
+
+@import 'jquery.bxslider'
+
+$page-width: 880px
+$bg-color: #000
+$red: #910d08
+
+.background,
+body
+  background: $bg-color url('../images/background.jpg?v=1') top center no-repeat
+  //min-width: $page-width
+  //margin: 0 auto
+  //min-height: 1883px
+  //overflow-y: auto
+
+
+  height: 1883px !important
+  //overflow-y: scroll !important
+
+.page
+  margin: 0 auto
+  width: $page-width
+  position: relative
+
+.typography,
+body
+  font-family: Arial, sans-serif
+  line-height: 1.5
+  color: white
+html
+  -webkit-font-smoothing: antialiased
+
+.text,
+p
+  margin: 8px 0 1em
+
+.header
+  height: 183px
+
+.hide-text
+  text-indent: -9999px
+
+.heading,
+h1, h2, h3, h4, h5, h6
+  font-family: "Arial Narrow Bold", "Arial Narrow", "ArialNarrow", "Arial-Narrow", Arial, sans-serif
+  font-weight: normal
+  margin-bottom: 6px
+  margin-top: 0
+  font-size: 29px
+
+h2
+  font-size: 29px
+  font-weight: bold
+  color: #ccc
+  margin-bottom: 9px
+h3
+  font-size: 38px
+  margin-top: 18px
+  font-family: "Franklin", "Arial Narrow Bold", sans-serif
+  font-weight: normal
+  letter-spacing: -1px
+  word-spacing: -10px
+  margin-bottom: 3px
+
+.red
+  color: $red
+
+h3
+  visibility: hidden
+
+.cufon-ready, .no-js
+  h3
+    visibility: visible
+
+
+a, a:hover, a:active, a:visited
+  color: white
+
+.albums
+  font-size: 18px
+  font-weight: normal
+  line-height: 1.234
+
+  a
+    color: black
+    display: block
+    text-decoration: none
+    position: relative
+
+
+  span
+    display: block
+    max-width: 187px
+  //div
+    display: inline-block
+    vertical-align: middle
+
+.common-slide a
+  margin:
+    top: 15px
+    left: 18px
+
+.cover
+  display: block
+  height: 187px
+  width: 187px
+  margin-bottom: 5px
+  margin-right: 13px
+  margin-top: 10px
+
+@for $i from 1 through 14
+  .album#{$i}
+    +albums-sprite("a#{$i}")
+
+.play
+  content: ''
+  display: block
+  +common-sprite(play)
+  +transition(opacity)
+  +transition-duration(.24s)
+  +transition-timing-function(ease-out)
+  height: common-sprite-height(play)
+  width: common-sprite-width(play)
+  opacity: 0
+  -ms-filter: "alpha(opacity=0)"
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  cursor: pointer
+
+a:hover .play,
+a:hover .cover:after
+  opacity: 1
+  -ms-filter: "alpha(opacity=62)"
+
+.sprite
+  display: inline-block
+
+.footer
+  color: #fff
+  min-height: 200px
+
+.smaller-text,
+small
+  font-size: 14px
+
+.center
+  text-align: center
+
+.alt-color
+  color: #ca2028
+  font-weight: bold
+  font-size: 18px
+
+.right-align
+  text-align: right
+
+.side-spacing
+  padding:
+    left: 47px
+    right: 23px
+
+.page-spacing
+  padding:
+    left: 6px
+    right: 6px
+
+.indent-spacing
+  margin-left: 40px
+
+.top-spacing
+  margin-top: 22px
+
+.top-padding
+  padding-top: 10px
+
+
+.shift-left
+  margin-left: -14px
+.shift-right
+  margin-left: 14px
+
+.left-spacing
+  padding-left: 18px
+
+.right-indent
+  margin-right: 78px
+
+.inner-spacing
+  padding: 5px
+
+.vertical-spacing
+  margin-top: 15px
+  margin-bottom: 10px
+
+.bordered
+  border: 3px solid white
+  border-radius: 3px
+
+.hidden-text
+  text-indent: -90cm
+
+.button
+  display: inline-block
+  color: white
+
+.playlists
+  display: block
+  color: $red
+  margin-top: 48px
+
+  h5, h6
+    color: #a3a4a3
+    font-size: 24px
+    padding-left: 22px
+    margin-bottom: -2px
+
+  h6
+    font-size: 16px
+    margin-top: -1px
+    width: 180px
+
+  h3
+    color: white
+    margin-bottom: 6px
+
+  .common-divider
+    margin-left: 22px
+
+  .heading
+    font-size: 18.2px
+    margin-top: 6px
+
+  .half-wide
+    width: 50%
+  .fourth-wide
+    width: 24.5%
+
+  .portrait-james
+    @extend .portrait-james:hover
+
+  .row
+    background-color: rgba(0,0,0, .35)
+  .row:hover
+    .portrait-lars
+      @extend .portrait-lars:hover
+    .portrait-kirk
+      @extend .portrait-kirk:hover
+    .portrait-robert
+      @extend .portrait-robert:hover
+
+    .frame
+      @extend .common-frame
+
+.frame
+  margin-bottom: 3px
+  background-image: none
+
+  height: common-sprite-height(frame)
+  width: common-sprite-width(frame)
+
+.frame, .common-frame
+  div
+    position: relative
+    top: 11px
+    left: 10px
+
+
+.common-listen
+  display: block
+  @extend .hide-text
+  margin-top: 2px
+
+.video
+  margin-bottom: 33px
+  iframe
+    border: 2px solid #b8b8b8
+    background-color: black
+
+.common-frame-alt
+  background-color: black
+  img
+    margin:
+      top: 10px
+      left: 11px
+
+.common-tagline
+  margin-bottom: 30px
+.common-dates
+  margin-top: -11px
+  margin-bottom: 9px
+//slider
+.bx-wrapper
+  .bx-controls-direction a
+    margin-top: -22px
+  a.bx-prev
+    @extend .common-previous
+    height: common-sprite-height(previous)
+    width: common-sprite-width(previous)
+    margin-left: -93px
+
+  a.bx-next
+    @extend .common-next
+    height: common-sprite-height(next)
+    width: common-sprite-width(next)
+    right: -82px
+
+.review
+  margin-top: 72px
+.tickets
+  position: relative
+  left: 16px
+
+.scroll-box
+  max-height: 418px
+  overflow-y: scroll
+
+  h5
+    font-size: 28px
+  p
+    font-size: 15px
+
+//@import 'scroll'

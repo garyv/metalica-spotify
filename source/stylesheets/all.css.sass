@@ -22,17 +22,26 @@ $page-width: 880px
 $bg-color: #000
 $red: #910d08
 
+// fix disappearing scrollbar in Spotify after navigating
+html
+  overflow-y: auto
+
 .background,
 body
   background: $bg-color url('../images/background.jpg?v=1') top center no-repeat
-  //min-width: $page-width
-  //margin: 0 auto
+  margin: 0 auto
   //min-height: 1883px
+  //min-height: 600px
+  //min-width: $page-width
   //overflow-y: auto
 
 
   //height: 1883px !important
   //overflow-y: scroll !important
+
+//.page-scroll
+  min-height: 600px
+
 
 .page
   margin: 0 auto
@@ -157,7 +166,7 @@ a:hover .cover:after
 
 .footer
   color: #fff
-  min-height: 200px
+  //min-height: 200px
 
 .smaller-text,
 small
